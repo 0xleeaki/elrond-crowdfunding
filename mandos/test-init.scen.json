@@ -19,14 +19,16 @@
     },
     {
       "step": "scDeploy",
+      "txId": "deploy",
       "tx": {
         "from": "address:my_address",
         "contractCode": "file:../output/crowdfunding.wasm",
-        "value": "0",
-        "gasLimit": "1,000,000",
+        "arguments": ["500,000,000,000", "123,000", "str:CROWD-123456"],
+        "gasLimit": "5,000,000",
         "gasPrice": "0"
       },
       "expect": {
+        "out": [],
         "status": "0",
         "gas": "*",
         "refund": "*"
@@ -37,13 +39,16 @@
       "accounts": {
         "address:my_address": {
           "nonce": "1",
-          "balance": "1,000,000"
+          "balance": "1,000,000",
+          "storage": {}
         },
         "sc:crowdfunding": {
           "nonce": "0",
           "balance": "0",
           "storage": {
-            "''owner": ""
+            "str:target": "500,000,000,000",
+            "str:deadline": "123,000",
+            "str:tokenIdentifier": "str:CROWD-123456"
           },
           "code": "file:../output/crowdfunding.wasm"
         }

@@ -2,13 +2,13 @@
 ////////////////// AUTO-GENERATED //////////////////
 ////////////////////////////////////////////////////
 
-// #![no_std]
+#![no_std]
 
-// elrond_wasm_node::wasm_endpoints! {
-//     crowdfunding
-//     (
-//         init
-//     )
-// }
+elrond_wasm_node::wasm_endpoints! {
+    crowdfunding
+    (
+        init
+    )
+}
 
-// elrond_wasm_node::wasm_empty_callback! {}
+elrond_wasm_node::wasm_empty_callback! {}

@@ -4,7 +4,7 @@
 Create wallet:
 
 ```
-erdpy --verbose wallet derive farmer.pem --mnemonic
+erdpy --verbose wallet derive farmer.pem --mnemonic --index 0
 ```
 
 Get HEX address from BECH32 address:
@@ -27,6 +27,10 @@ erdpy --verbose contract deploy --project=crowdfunding --recall-nonce --pem="../
 erdpy contract call erd1qqqqqqqqqqqqqpgqg2xqcug6ghcftlrufdge3a5tx52r8z3yeeyq649nn6 --recall-nonce --pem="../farmer.pem" --gas-limit=10000000 --function="fund"  --value=5 --proxy="https://testnet-gateway.elrond.com" --chain=T --send
 ```
 
+```
+erdpy contract call erd1qqqqqqqqqqqqqpgqg2xqcug6ghcftlrufdge3a5tx52r8z3yeeyq649nn6 --recall-nonce --pem="../farmer.pem" --gas-limit=10000000 --function="claim"  --proxy="https://testnet-gateway.elrond.com" --chain=T --send
+```
+
 View contract info:
 
 ```
@@ -34,7 +38,7 @@ erdpy --verbose contract query erd1qqqqqqqqqqqqqpgqg2xqcug6ghcftlrufdge3a5tx52r8
 ```
 
 ```
-erdpy --verbose contract query erd1qqqqqqqqqqqqqpgqg2xqcug6ghcftlrufdge3a5tx52r8z3yeeyq649nn6 --function="getStatus" --proxy="https://testnet-gateway.elrond.com"
+erdpy --verbose contract query erd1qqqqqqqqqqqqqpgqg2xqcug6ghcftlrufdge3a5tx52r8z3yeeyq649nn6 --function="status" --proxy="https://testnet-gateway.elrond.com"
 ```
 
 ```

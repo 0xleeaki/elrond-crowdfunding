@@ -16,7 +16,7 @@ erdpy wallet bech32 --decode erd1q049n3qp2wc0jra5rd83za69u3ze0we0yqm7ax9hghjsde4
 Deploy & interact with contract:
 
 ```
-erdpy --verbose contract build crowdfunding
+erdpy --verbose contract build contract
 ```
 
 ```
